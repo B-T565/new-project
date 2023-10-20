@@ -214,91 +214,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
         transform: scale(102%);
         opacity: 0.8;
     }
-    /* forgetPassword */
-    .login-content p {
-        margin-top: -10px;
-        font-size: 14px;
-        color: var(--colorBlack1);
-    }
-    .ii {
-        color: var(--colorRed);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-    }
-    .ii i {
-        transition: .3s;
-    }
-    .input-div .div1 {
-        position: relative;
-        height: 45px;
-        margin-top: 10px;
-    }
-    .input-div .div1 input {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-        outline: none;
-        background: none;
-        padding: 0.5rem 0.7rem;
-        font-size: 1rem;
-        color: var(--colorBlack1);
-    }
-    .back {
-        margin-top: 40px;
-        text-align: right;
-    }
-    .back a {
-        font-size: 14px;
-        text-decoration: none;
-        color: var(--colorBlack1);
-    }
-    .back a:hover {
-        opacity: 0.8;
-    }
-    /* Send OTP */
-    .i1 {
-        color: var(--colorRed);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .i1 i {
-        transition: .3s;
-    }
-    .input-div .div2 {
-        position: relative;
-        height: 45px;
-    }
-    .input-div .div2 input {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-        outline: none;
-        background: none;
-        padding: 0.5rem 0.7rem;
-        font-size: 1rem;
-        color: var(--colorBlack1);
-    }
-    .back {
-        margin-top: 40px;
-        text-align: right;
-    }
-    .back a {
-        font-size: 14px;
-        text-decoration: none;
-        color: var(--colorBlack1);
-    }
-    .back a:hover {
-        opacity: 0.8;
-    }
+    
     /* responsive screen */
     @media screen and (max-width: 1050px) {
         .container {
@@ -319,14 +235,6 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
         }
         .img img {
             width: 400px;
-        }
-        /* forgetPassword */
-        .login-content p {
-            margin-top: 10px;
-        }
-        .login-content .back p {
-            color: var(--colorBlack1);
-            margin-top: -20px;
         }
     }
     @media screen and (max-width: 900px) {
@@ -351,14 +259,6 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
             width: 320px;
             margin-left: -10px;
             font-size: .8rem;
-        }
-        /* forgetPassword */
-        .login-content p {
-            margin-top: 10px;
-        }
-        .login-content .back p {
-            color: var(--colorBlack1);
-            margin-top: -20px;
         }
     }
     @media screen and (max-width: 800px) {
@@ -387,14 +287,6 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
             width: 320px;
             margin-left: -10px;
             font-size: .8rem;
-        }
-        /* forgetPassword */
-        .login-content p {
-            margin-top: 10px;
-        }
-        .login-content .back p {
-            color: var(--colorBlack1);
-            margin-top: -20px;
         }
     }
   `]
