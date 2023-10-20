@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-new-acc',
@@ -304,7 +304,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
   `]
 })
 export class NewAccComponent {
-  user = faUser;
-  mail = faLock;
-  lock = faEnvelope;
+    user = faUser;
+    mail = faEnvelope;
+    lock = faLock;
 }

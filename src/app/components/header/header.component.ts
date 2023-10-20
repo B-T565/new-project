@@ -58,6 +58,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
     }
     nav ul li{
       list-style-type: none;
+      margin-top: 18px;
     }
     nav ul li a>.icons{
       font-size: 20px;
@@ -69,7 +70,6 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
     }
     nav ul li a{
       display: block;
-      margin-top: 20px;
     }
     nav ul li a:hover{
       opacity: .9;
@@ -84,7 +84,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
     .dropdown{
       position: absolute;
       background-color: #f9f9f9;
-      width: 140px;
+      width: 120px;
       display: none;
       border-radius: 0px 0px 5px 5px;
       box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
@@ -95,9 +95,9 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
     }
     .dropdown a{
       text-align: center;
-      margin-bottom: 20px;
       text-decoration: none;
       color: var(--colorBlack);
+      font-size: 13px;
     }
     .dropdown a:hover{
       background-color: var(--colorRed);
@@ -115,6 +115,9 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
       .item>p{
         font-size: 12px;
       }
+      nav ul li{
+        margin-top: 20px; 
+      }
       nav ul li a>.icons{
         font-size: 15px;
         margin-right: 10px;
@@ -128,6 +131,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
       .dropdown{
         width: 100px;
         position: absolute;
+        top: 7%;
         right: 5%;
       }
       .dropdown a{
