@@ -47,7 +47,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
     </div>
   `,
     styles: [`
-      .wave {
+    .wave {
       position: fixed;
       bottom: 0;
       left: 0;
@@ -212,48 +212,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
     .footer-logo img:hover {
         transform: scale(102%);
         opacity: 0.8;
-    } 
-    
-    /* Send OTP */
-    .i1 {
-        color: var(--colorRed);
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
-    .i1 i {
-        transition: .3s;
-    }
-    .input-div .div2 {
-        position: relative;
-        height: 45px;
-    }
-    .input-div .div2 input {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-        outline: none;
-        background: none;
-        padding: 0.5rem 0.7rem;
-        font-size: 1rem;
-        color: var(--colorBlack1);
-    }
-    .back {
-        margin-top: 40px;
-        text-align: right;
-    }
-    .back a {
-        font-size: 14px;
-        text-decoration: none;
-        color: var(--colorBlack1);
-    }
-    .back a:hover {
-        opacity: 0.8;
-    }
-    
     /* From responsive screen */
     @media screen and (max-width: 1050px) {
         .container {

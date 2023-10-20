@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ContentComponent } from './components/content/content.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { OtpComponent } from './components/otp/otp.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     HeaderComponent,
     ContentComponent,
     LoginComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    OtpComponent
   ],
   imports: [
     BrowserModule,

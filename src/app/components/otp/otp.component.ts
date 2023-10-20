@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-forgot-password',
+  selector: 'app-otp',
   template: `
     <img class="wave" src="./assets/Images/wave.png" alt="">
     <div class="container">
@@ -12,23 +12,23 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
             <img src="./assets/Images/bg (1).svg" alt="">
         </div>
         <div class="login-content">
-            <form action="/forgot-password">
+            <form action="otp.html">
                 <img src="./assets/Images/logo.png" alt="">
-                <h2 class="title">ភ្លេចលេខសម្លាត់</h2>
-                <p>បញ្ជូលអីុមែលដើម្បីកំំណត់លេខសម្លាត់ឡើងវិញុ។</p>
+                <h2 class="title">សូមបំពេញ OTP ប្រាំមួយខ្ទង់</h2>
+
                 <div class="input-div one">
-                    <div class="ii">
-                        <fa-icon [icon]="mail"></fa-icon>
+                    <div class="i1">
+                        <fa-icon [icon]="search"></fa-icon>
                     </div>
-                    <div class="div1">
-                        <input type="text" class="input" name="" id="" placeholder="បញ្ជូលអីុមែល">
+                    <div class="div2">
+                        <input type="text" class="input" name="" id="" placeholder="សូមបំពេញ OTP ប្រាំមួយខ្ទង់">
                     </div>
                 </div>
                 <div class="btn">
-                    <button type="submit"><a routerLink="/otp">កំំណត់លេខសម្លាត់ឡើងវិញុ</a></button>
+                    <button type="submit"><a routerLink="#">ផ្ទៀងផ្ទាត់ OTP</a></button>
                 </div>
                 <div class="back">
-                    <a routerLink="/login">
+                    <a routerLink="/forgot-password">
                         <p><fa-icon [icon]="left"></fa-icon> ត្រឡប់ទៅចូលប្រើប្រាស់</p>
                     </a>
                 </div>
@@ -95,28 +95,33 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
     .login-content .input-div.one {
         margin-top: 0px;
     }
-    /* forgetPassword */
-    .login-content p {
-        margin-top: -10px;
-        font-size: 14px;
-        color: var(--colorBlack1);
-    }
-    .ii {
+    .i {
         color: var(--colorRed);
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 10px;
     }
-    .ii i {
+    .i i {
         transition: .3s;
     }
-    .input-div .div1 {
+    .input-div .div {
         position: relative;
         height: 45px;
-        margin-top: 10px;
     }
-    .input-div .div1 input {
+    .input-div:before,
+    .input-div:after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        width: 0%;
+        height: 2px;
+        background-color: var(--colorRed);
+        transition: .4s;
+    }
+    .input-div.focus .i i {
+        color: var(--colorRed);
+    }
+    .input-div .div input {
         position: absolute;
         left: 0;
         top: 0;
@@ -127,18 +132,37 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
         background: none;
         padding: 0.5rem 0.7rem;
         font-size: 1rem;
-        color: var(--colorBlack1);
+        color: var(--colorBlack);
+        font-family: 'poppins', sans-serif;
     }
-    .back {
-        margin-top: 40px;
-        text-align: right;
+    .input-div .pass {
+        margin-bottom: 4px;
     }
-    .back a {
-        font-size: 14px;
+    .remumber {
+        width: 100%;
+        height: 20px;
+        display: inline-block;
+    }
+    .remumber a{
+        color: var(--colorBlack);
+    }
+    .rem-left {
+        float: left;
+        text-align: left;
         text-decoration: none;
-        color: var(--colorBlack1);
+        color: var(--colorRed);
+        font-size: 0.9rem;
+        transition: .3s;
     }
-    .back a:hover {
+    .rem-right {
+        float: right;
+        text-align: right;
+        text-decoration: none;
+        color: var(--colorRed);
+        font-size: 0.9rem;
+        transition: .3s;
+    }
+    .remumber a:hover {
         opacity: 0.8;
     }
     .btn button{
@@ -182,6 +206,45 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
     .footer-logo img:hover {
         transform: scale(102%);
         opacity: 0.8;
+    } 
+    /* Send OTP */
+    .i1 {
+        color: var(--colorRed);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .i1 i {
+        transition: .3s;
+    }
+    .input-div .div2 {
+        position: relative;
+        height: 45px;
+    }
+    .input-div .div2 input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        padding: 0.5rem 0.7rem;
+        font-size: 1rem;
+        color: var(--colorBlack1);
+    }
+    .back {
+        margin-top: 40px;
+        text-align: right;
+    }
+    .back a {
+        font-size: 14px;
+        text-decoration: none;
+        color: var(--colorBlack1);
+    }
+    .back a:hover {
+        opacity: 0.8;
     }
     /* From responsive screen */
     @media screen and (max-width: 1050px) {
@@ -203,14 +266,6 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
         }
         .img img {
             width: 400px;
-        }
-        /* forgetPassword */
-        .login-content p {
-            margin-top: 10px;
-        }
-        .login-content .back p {
-            color: var(--colorBlack1);
-            margin-top: -20px;
         }
     }
     @media screen and (max-width: 900px) {
@@ -235,14 +290,6 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
             width: 320px;
             margin-left: -10px;
             font-size: .8rem;
-        }
-        /* forgetPassword */
-        .login-content p {
-            margin-top: 10px;
-        }
-        .login-content .back p {
-            color: var(--colorBlack1);
-            margin-top: -20px;
         }
     }
     @media screen and (max-width: 800px) {
@@ -272,19 +319,10 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
             margin-left: -10px;
             font-size: .8rem;
         }
-        /* forgetPassword */
-        .login-content p {
-            margin-top: 10px;
-        }
-        .login-content .back p {
-            color: var(--colorBlack1);
-            margin-top: -20px;
-        }
     }
-
   `]
 })
-export class ForgotPasswordComponent {
-  mail = faEnvelope;
+export class OtpComponent {
+  search = faSearch;
   left = faAngleLeft;
 }
