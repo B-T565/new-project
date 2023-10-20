@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-forgot-password',
   template: `
     <img class="wave" src="./assets/Images/wave.png" alt="">
     <div class="container">
@@ -12,31 +12,25 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
             <img src="./assets/Images/bg (1).svg" alt="">
         </div>
         <div class="login-content">
-            <form action="/login">
+            <form action="/forgot-password">
                 <img src="./assets/Images/logo.png" alt="">
-                <h2 class="title">ចូលប្រើប្រាស់គណនីរបស់អ្នក</h2>
+                <h2 class="title">ភ្លេចលេខសម្លាត់</h2>
+                <p>បញ្ជូលអីុមែលដើម្បីកំំណត់លេខសម្លាត់ឡើងវិញុ។</p>
                 <div class="input-div one">
-                    <div class="i">
-                        <fa-icon [icon]="user"></fa-icon>
+                    <div class="ii">
+                        <fa-icon [icon]="mail"></fa-icon>
                     </div>
-                    <div class="div">
-                        <input type="text" class="input" name="" id="" placeholder="បញ្ជូលឈ្មោះ">
+                    <div class="div1">
+                        <input type="text" class="input" name="" id="" placeholder="បញ្ជូលអីុមែល">
                     </div>
-                </div>
-                <div class="input-div pass">
-                    <div class="i">
-                        <fa-icon [icon]="lock"></fa-icon>
-                    </div>
-                    <div class="div">
-                        <input type="password" class="input" name="" id="" placeholder="ពាក្យសម្ងាត់">
-                    </div>
-                </div>
-                <div class="remumber">
-                    <a routerLink="#" class="rem-left"><input type="checkbox" checked name="" id="" > ចង់ចាំខ្ងុំ</a>
-                    <a routerLink="/forgot-password" class="rem-right">ភ្លេចលេខសម្ងាត់</a>
                 </div>
                 <div class="btn">
-                    <button type="submit"><a routerLink="">ចូលប្រើប្រាស់</a></button>
+                    <button type="submit"><a routerLink="#">កំំណត់លេខសម្លាត់ឡើងវិញុ</a></button>
+                </div>
+                <div class="back">
+                    <a routerLink="/login">
+                        <p><fa-icon [icon]="left"></fa-icon> ត្រឡប់ទៅចូលប្រើប្រាស់</p>
+                    </a>
                 </div>
                 <div class="footer-logo">
                     <img src="./assets/Images/kh-removebg-preview.png" alt="">
@@ -46,8 +40,8 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
         </div>
     </div>
   `,
-    styles: [`
-      .wave {
+  styles: [`
+    .wave {
       position: fixed;
       bottom: 0;
       left: 0;
@@ -101,33 +95,28 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
     .login-content .input-div.one {
         margin-top: 0px;
     }
-    .i {
+    /* forgetPassword */
+    .login-content p {
+        margin-top: -10px;
+        font-size: 14px;
+        color: var(--colorBlack1);
+    }
+    .ii {
         color: var(--colorRed);
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 10px;
     }
-    .i i {
+    .ii i {
         transition: .3s;
     }
-    .input-div .div {
+    .input-div .div1 {
         position: relative;
         height: 45px;
+        margin-top: 10px;
     }
-    .input-div:before,
-    .input-div:after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        width: 0%;
-        height: 2px;
-        background-color: var(--colorRed);
-        transition: .4s;
-    }
-    .input-div.focus .i i {
-        color: var(--colorRed);
-    }
-    .input-div .div input {
+    .input-div .div1 input {
         position: absolute;
         left: 0;
         top: 0;
@@ -138,37 +127,18 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
         background: none;
         padding: 0.5rem 0.7rem;
         font-size: 1rem;
-        color: var(--colorBlack);
-        font-family: 'poppins', sans-serif;
+        color: var(--colorBlack1);
     }
-    .input-div .pass {
-        margin-bottom: 4px;
-    }
-    .remumber {
-        width: 100%;
-        height: 20px;
-        display: inline-block;
-    }
-    .remumber a{
-        color: var(--colorBlack);
-    }
-    .rem-left {
-        float: left;
-        text-align: left;
-        text-decoration: none;
-        color: var(--colorRed);
-        font-size: 0.9rem;
-        transition: .3s;
-    }
-    .rem-right {
-        float: right;
+    .back {
+        margin-top: 40px;
         text-align: right;
-        text-decoration: none;
-        color: var(--colorRed);
-        font-size: 0.9rem;
-        transition: .3s;
     }
-    .remumber a:hover {
+    .back a {
+        font-size: 14px;
+        text-decoration: none;
+        color: var(--colorBlack1);
+    }
+    .back a:hover {
         opacity: 0.8;
     }
     .btn button{
@@ -212,48 +182,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
     .footer-logo img:hover {
         transform: scale(102%);
         opacity: 0.8;
-    } 
-    
-    /* Send OTP */
-    .i1 {
-        color: var(--colorRed);
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
-    .i1 i {
-        transition: .3s;
-    }
-    .input-div .div2 {
-        position: relative;
-        height: 45px;
-    }
-    .input-div .div2 input {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-        outline: none;
-        background: none;
-        padding: 0.5rem 0.7rem;
-        font-size: 1rem;
-        color: var(--colorBlack1);
-    }
-    .back {
-        margin-top: 40px;
-        text-align: right;
-    }
-    .back a {
-        font-size: 14px;
-        text-decoration: none;
-        color: var(--colorBlack1);
-    }
-    .back a:hover {
-        opacity: 0.8;
-    }
-    
     /* From responsive screen */
     @media screen and (max-width: 1050px) {
         .container {
@@ -274,6 +203,14 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
         }
         .img img {
             width: 400px;
+        }
+        /* forgetPassword */
+        .login-content p {
+            margin-top: 10px;
+        }
+        .login-content .back p {
+            color: var(--colorBlack1);
+            margin-top: -20px;
         }
     }
     @media screen and (max-width: 900px) {
@@ -298,6 +235,14 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
             width: 320px;
             margin-left: -10px;
             font-size: .8rem;
+        }
+        /* forgetPassword */
+        .login-content p {
+            margin-top: 10px;
+        }
+        .login-content .back p {
+            color: var(--colorBlack1);
+            margin-top: -20px;
         }
     }
     @media screen and (max-width: 800px) {
@@ -327,10 +272,19 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
             margin-left: -10px;
             font-size: .8rem;
         }
+        /* forgetPassword */
+        .login-content p {
+            margin-top: 10px;
+        }
+        .login-content .back p {
+            color: var(--colorBlack1);
+            margin-top: -20px;
+        }
     }
+
   `]
 })
-export class LoginComponent {
-  user = faUser;
-  lock = faLock;
+export class ForgotPasswordComponent {
+  mail = faEnvelope;
+  left = faAngleLeft;
 }
