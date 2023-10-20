@@ -78,6 +78,9 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
       position: relative;
       display: inline-block;
     }
+    li .drop>a{
+      position: relative;
+    }
     .dropdown{
       position: absolute;
       background-color: #f9f9f9;
