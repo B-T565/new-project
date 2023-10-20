@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     
     <div class="grid-container">
       <div class="item">
-          <a routerLink="#"><img src="./assets/Images/user.png" width="80px" height="80px" alt=""></a>
+          <a routerLink="/content"><img src="./assets/Images/user.png" width="80px" height="80px" alt=""></a>
           <p>STAFF_APP</p>
       </div>
       <div class="item">
