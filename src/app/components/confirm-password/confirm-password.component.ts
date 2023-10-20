@@ -1,43 +1,53 @@
 import { Component } from '@angular/core';
 
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-otp',
+  selector: 'app-confirm-password',
   template: `
-    <img class="wave" src="./assets/Images/wave.png" alt="">
-    <div class="container">
-        <div class="img">
-            <img src="./assets/Images/bg (1).svg" alt="">
-        </div>
-        <div class="login-content">
-            <form action="otp.html">
-                <img src="./assets/Images/logo.png" alt="">
-                <h2 class="title">សូមបំពេញ OTP ប្រាំមួយខ្ទង់</h2>
-                <div class="input-div one">
-                    <div class="i1">
-                        <fa-icon [icon]="search"></fa-icon>
-                    </div>
-                    <div class="div2">
-                        <input type="text" class="input" name="" id="" placeholder="សូមបំពេញ OTP ប្រាំមួយខ្ទង់">
-                    </div>
-                </div>
-                <div class="btn">
-                    <button type="button"><a routerLink="/confirm-password">ផ្ទៀងផ្ទាត់ OTP</a></button>
-                </div>
-                <div class="back">
-                    <a routerLink="/forgot-password">
-                        <p><fa-icon [icon]="left"></fa-icon> ត្រឡប់ទៅចូលប្រើប្រាស់</p>
-                    </a>
-                </div>
-                <div class="footer-logo">
-                    <img src="./assets/Images/kh-removebg-preview.png" alt="">
-                    <img src="./assets/Images/us.png" alt="">
-                </div>
-            </form>
-        </div>
-    </div>
+  <img class="wave" src="./assets/Images/wave.png" alt="">
+  <div class="container">
+      <div class="img">
+          <img src="./assets/Images/bg (1).svg" alt="">
+      </div>
+      <div class="login-content">
+          <form action="/otp">
+              <img src="./assets/Images/logo.png" alt="">
+              <h2 class="title">សូមផ្ទៀងផ្ទាត់គណនីរបស់អ្នក</h2>
+
+              <div class="input-div pass">
+                  <div class="i">
+                      <fa-icon [icon]="lock"></fa-icon>
+                  </div>
+                  <div class="div">
+                      <input type="password" class="input" name="" id="" placeholder="ពាក្យសម្ងាត់ថ្មី">
+                  </div>
+              </div>
+              <div class="input-div pass">
+                  <div class="i">
+                      <fa-icon [icon]="lock"></fa-icon>
+                  </div>
+                  <div class="div">
+                      <input type="password" class="input" name="" id="" placeholder="បញ្ជាក់ពាក្យសម្ងាត់ថ្មី">
+                  </div>
+              </div>
+
+              <div class="btn">
+                  <button type="button"><a routerLink="/login">ចូលប្រើប្រាស់</a></button>
+              </div>
+              <div class="back">
+                  <a routerLink="/otp">
+                      <p><fa-icon [icon]="left"></fa-icon> ត្រឡប់ទៅចូលប្រើប្រាស់</p>
+                  </a>
+              </div>
+              <div class="footer-logo">
+                  <img src="./assets/Images/kh-removebg-preview.png" alt="">
+                  <img src="./assets/Images/us.png" alt="">
+              </div>
+          </form>
+      </div>
+  </div>
   `,
   styles: [`
     .wave {
@@ -188,6 +198,18 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
     .btn button:hover {
         opacity: 0.9;
     }
+    .back {
+        margin-top: 40px;
+        text-align: right;
+    }
+    .back a {
+        font-size: 14px;
+        text-decoration: none;
+        color: var(--colorBlack1);
+    }
+    .back a:hover {
+        opacity: 0.8;
+    }
    .footer-logo {
         width: 200px;
         height: 50px;
@@ -204,45 +226,6 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
     }
     .footer-logo img:hover {
         transform: scale(102%);
-        opacity: 0.8;
-    } 
-    /* Send OTP */
-    .i1 {
-        color: var(--colorRed);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .i1 i {
-        transition: .3s;
-    }
-    .input-div .div2 {
-        position: relative;
-        height: 45px;
-    }
-    .input-div .div2 input {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-        outline: none;
-        background: none;
-        padding: 0.5rem 0.7rem;
-        font-size: 1rem;
-        color: var(--colorBlack1);
-    }
-    .back {
-        margin-top: 40px;
-        text-align: right;
-    }
-    .back a {
-        font-size: 14px;
-        text-decoration: none;
-        color: var(--colorBlack1);
-    }
-    .back a:hover {
         opacity: 0.8;
     }
     /* From responsive screen */
@@ -321,7 +304,7 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
     }
   `]
 })
-export class OtpComponent {
-  search = faSearch;
+export class ConfirmPasswordComponent {
+  lock = faLock;
   left = faAngleLeft;
 }
