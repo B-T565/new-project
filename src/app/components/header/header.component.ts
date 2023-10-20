@@ -16,14 +16,14 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
       <div class="item1">
         <nav>
           <ul>
-            <li class="drop"><a href="#">
+            <li class="drop"><a routerLink="#">
               <fa-icon [icon]="user" class="icons"></fa-icon></a>
               <div class="dropdown">
-                <a href="#"><fa-icon [icon]="user"></fa-icon> គណនីថ្មី</a>
+                <a routerLink="/login"><fa-icon [icon]="user"></fa-icon> គណនីថ្មី</a>
                 <a href="#"><fa-icon [icon]="lock"></fa-icon> ចាក់ចេញ</a>
               </div>
             </li>
-            <li><a href="#"><img src="./assets/Images/cm.png" width="25px" height="25px" alt="icon"></a></li>
+            <li><a routerLink="#"><img src="./assets/Images/cm.png" width="25px" height="25px" alt="icon"></a></li>
           </ul>
         </nav>
       </div>
