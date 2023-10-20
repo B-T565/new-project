@@ -20,7 +20,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
               <fa-icon [icon]="user" class="icons"></fa-icon></a>
               <div class="dropdown">
                 <a routerLink="/login"><fa-icon [icon]="user"></fa-icon> គណនីថ្មី</a>
-                <a href="#"><fa-icon [icon]="lock"></fa-icon> ចាក់ចេញ</a>
+                <a routerLink="/new-acc"><fa-icon [icon]="lock"></fa-icon> ចាក់ចេញ</a>
               </div>
             </li>
             <li><a routerLink="#"><img src="./assets/Images/cm.png" width="25px" height="25px" alt="icon"></a></li>

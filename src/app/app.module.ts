@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { OtpComponent } from './components/otp/otp.component';
 import { ConfirmPasswordComponent } from './components/confirm-password/confirm-password.component';
+import { NewAccComponent } from './components/new-acc/new-acc.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ConfirmPasswordComponent } from './components/confirm-password/confirm-
     LoginComponent,
     ForgotPasswordComponent,
     OtpComponent,
-    ConfirmPasswordComponent
+    ConfirmPasswordComponent,
+    NewAccComponent
   ],
   imports: [
     BrowserModule,
