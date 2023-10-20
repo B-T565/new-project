@@ -119,13 +119,13 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
         margin-top: 20px; 
       }
       nav ul li a>.icons{
-        font-size: 15px;
+        font-size: 18px;
         margin-right: 10px;
       }
       nav ul li a>img{
         width: 20px;
         height: 20px;
-        margin-top: -1px;   
+        margin-top: 2px;   
         margin-right: -20px;
       }
       .dropdown{
