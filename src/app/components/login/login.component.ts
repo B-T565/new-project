@@ -15,7 +15,6 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
             <form action="/login">
                 <img src="./assets/Images/logo.png" alt="">
                 <h2 class="title">ចូលប្រើប្រាស់គណនីរបស់អ្នក</h2>
-
                 <div class="input-div one">
                     <div class="i">
                         <fa-icon [icon]="user"></fa-icon>
@@ -24,7 +23,6 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
                         <input type="text" class="input" name="" id="" placeholder="បញ្ជូលឈ្មោះ">
                     </div>
                 </div>
-
                 <div class="input-div pass">
                     <div class="i">
                         <fa-icon [icon]="lock"></fa-icon>
@@ -33,16 +31,13 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
                         <input type="password" class="input" name="" id="" placeholder="ពាក្យសម្ងាត់">
                     </div>
                 </div>
-
                 <div class="remumber">
-                    <a href="#" class="rem-left"><input type="checkbox" checked name="" id="" > ចង់ចាំខ្ងុំ</a>
-                    <a routerLink="../forgot-password" class="rem-right">ភ្លេចលេខសម្ងាត់</a>
+                    <a routerLink="#" class="rem-left"><input type="checkbox" checked name="" id="" > ចង់ចាំខ្ងុំ</a>
+                    <a routerLink="#" class="rem-right">ភ្លេចលេខសម្ងាត់</a>
                 </div>
-
                 <div class="btn">
-                    <button type="submit"><a routerLink="/home">ចូលប្រើប្រាស់</a></button>
+                    <button type="submit"><a routerLink="">ចូលប្រើប្រាស់</a></button>
                 </div>
-
                 <div class="footer-logo">
                     <img src="./assets/Images/kh-removebg-preview.png" alt="">
                     <img src="./assets/Images/us.png" alt="">
